@@ -1,3 +1,104 @@
 
+############################################################
+               TOC - TABLE OF CONTENTS
+############################################################
+
+0) Scratchpad to sort
+1) Fundamental Technologies
+    1.1) CICD
+
+=============================================================
+1) Fundamental Technologies
+=============================================================
+
+-------------------------------------------------------------
+1.1) CICD
+-------------------------------------------------------------
+
 A pipeline is composed of independent jobs that run scripts, grouped into stages.
 Stages run in sequential order, but jobs within stages run in parallel.
+
+Determining when to introduce a new stage in your CI/CD pipeline depends 
+on various factors, including your project's specific requirements, complexity, 
+and the level of confidence you need in your software before deploying it to 
+production. Here are some considerations to help you decide when to add a new stage
+
+In general, the goal of adding stages is to ensure that each phase of the 
+software delivery process is well-defined, isolated, and thoroughly tested. 
+This approach helps catch issues early in the development cycle and provides 
+confidence that your software is ready for production deployment. Keep in mind 
+that while adding more stages can improve the quality and reliability of your 
+software, it also adds complexity to your pipeline, so it's essential to strike 
+a balance that aligns with your project's needs.
+
+In the context of CI/CD (Continuous Integration/Continuous Deployment), a 
+"stage" and a "pipeline" are related concepts used to automate and manage 
+the software development and delivery process. Let's define each term:
+
+1. **Stage**:
+   
+   - A "stage" refers to a specific phase or step within a CI/CD pipeline. 
+   It represents a distinct set of tasks or actions that need to be executed as 
+   part of the software delivery process.
+   
+   - Each stage typically has a well-defined purpose and may include activities 
+   such as building the code, running tests, deploying to a test environment, 
+   or even manual approval steps.
+
+   - Stages are sequential, meaning they are executed one after the other. 
+   Successful completion of one stage is often a prerequisite for moving to the next stage.
+
+   - Stages help organize and modularize the CI/CD process, making it easier 
+   to understand, maintain, and troubleshoot. They also enable parallel processing 
+   and isolation of specific tasks.
+
+2. **Pipeline**:
+
+   - A "pipeline" is a set of connected stages that together define the entire 
+   CI/CD process for a software application or service.
+
+   - It represents the end-to-end automation of building, testing, and deploying 
+   software changes from version control (e.g., code repository) to production.
+
+   - A CI/CD pipeline can include multiple stages, such as build, test, deploy, 
+   and monitor, each responsible for specific actions and validations.
+
+   - Pipelines can be triggered automatically when code changes are pushed to 
+   the repository or manually by developers or release managers.
+
+   - The primary goal of a CI/CD pipeline is to streamline and accelerate the 
+   software development and deployment process while ensuring code quality, 
+   consistency, and reliability.
+
+Here's a simplified example of a CI/CD pipeline with stages:
+
+1. **Source Code Stage**:
+   - Trigger: Code pushed to the version control system.
+   - Action: Fetch the latest code changes from the repository.
+
+2. **Build Stage**:
+   - Trigger: Successful completion of the source code stage.
+   - Action: Compile code, package the application, and create artifacts.
+
+3. **Test Stage**:
+   - Trigger: Successful completion of the build stage.
+   - Action: Run automated tests, including unit tests, integration tests, 
+   and other types of testing.
+
+4. **Deployment Stage**:
+   - Trigger: Successful completion of the test stage.
+   - Action: Deploy the application to a staging or test environment for f
+   urther validation.
+
+5. **Approval Stage**:
+   - Trigger: Optional manual approval or automated criteria.
+   - Action: Wait for human approval or automated checks before proceeding 
+   to production deployment.
+
+6. **Production Stage**:
+   - Trigger: Successful completion of the approval stage.
+   - Action: Deploy the application to the production environment.
+
+CI/CD pipelines are a fundamental part of modern software development, 
+promoting automation, consistency, and the ability to quickly deliver software 
+updates to users while maintaining high quality and reliability.
