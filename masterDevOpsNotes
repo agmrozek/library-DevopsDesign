@@ -5,11 +5,21 @@
 
 0) Scratchpad to sort
 1) Fundamental Technologies
+    1.0) Fundamentals
     1.1) CICD
 
 =============================================================
 1) Fundamental Technologies
 =============================================================
+
+-------------------------------------------------------------
+1.0) Fundamentals
+-------------------------------------------------------------
+
+The Software Development Life Cycle, also sometimes referred to as SDLC for short, 
+is the process of planning, developing, testing, and deploying software.
+
+
 
 -------------------------------------------------------------
 1.1) CICD
